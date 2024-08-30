@@ -287,3 +287,69 @@ footer {
     position: relative;
     bottom: 0;
 }
+
+.footer-container {
+    background-color: #F45A27; /* Matching the orange background */
+    color: white;
+    padding: 5px 10px; /* Reduced padding to decrease height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically to center */
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 150px; /* Adjusted minimum width */
+    margin: 0; /* Removed margin to decrease height */
+    text-align: center; /* Center align the text and content */
+}
+
+    .footer-section p {
+        font-weight: bold;
+        margin: 0; /* Removed margin to save space */
+    }
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-menu li {
+        margin-bottom: 4px; /* Slight reduction in spacing between list items */
+    }
+
+    .footer-menu a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .footer-menu a:hover {
+            text-decoration: underline;
+        }
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 10px; /* Adjust the spacing between icons */
+    margin-top: 10px; /* Add a margin on top to create space between the text and icons */
+    align-items: center; /* Align icons vertically to center */
+}
+
+    .social-icons a img {
+        width: 24px; /* Keep social media icons at default size */
+        height: 24px;
+    }
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 10px; /* Adds a bit of spacing on small screens */
+    }
+}
