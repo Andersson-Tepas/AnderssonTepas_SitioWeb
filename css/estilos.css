@@ -1,355 +1,796 @@
-﻿/* Establece el cuerpo y el html para llenar la pantalla */
-html, body {
+﻿/* Estilos generales */
+body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
     font-family: Arial, sans-serif;
+    height: 100%; /* Asegura que el body y html abarquen toda la altura de la página */
 }
 
-/* Header */
-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
-    header ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    .nav-list li {
+        margin: 0 15px;
     }
 
-        header ul li {
-            margin: 0 15px;
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: block;
+            border-radius: 5px;
         }
 
-            header ul li a {
-                text-decoration: none;
-                color: #333;
-                font-weight: bold;
+            .nav-list li a:hover {
+                background-color: #ddd;
+                color: black;
             }
 
-                header ul li a:hover {
-                    color: #007bff;
-                }
+            .nav-list li a[href="index.html"] {
+                background-color: #f45a27; /* Color para "Inicio" */
+            }
 
-/* Main content */
-main {
-    flex: 1; /* Esto permite que el main ocupe el espacio restante */
-    padding: 20px;
+            .nav-list li a[href="views/servicio.html"] {
+                background-color: #4caf50; /* Color para "Servicio" */
+            }
+
+            .nav-list li a[href="views/acercade.html"] {
+                background-color: #ffeb3b; /* Color para "Acerca de" */
+                color: black;
+            }
+
+            .nav-list li a[href="views/contacto.html"] {
+                background-color: #f44336; /* Color para "Contacto" */
+            }
+
+/* Hero section */
+.hero {
+    background-color: #0056a4; /* Color azul de fondo */
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Reducir un poco el padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh; /* Altura mínima ajustada para hacer la sección más compacta */
 }
 
+    .hero h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 auto 20px auto; /* Reducir un poco el espacio inferior */
+    }
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+    .cta-buttons .btn {
+        background-color: #f45a27;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .cta-buttons .btn:hover {
+            background-color: #ff6f4d;
+        }
+
 /* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
+.footer-container {
+    background-color: #f45a27;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
     position: relative;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+    .footer-section p {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .footer-menu li {
+        margin: 5px 0;
+    }
+
+        .footer-menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+            .footer-menu li a:hover {
+                text-decoration: underline;
+            }
+
+.social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.footer-container {
+    flex-shrink: 0; /* Asegura que el footer no se reduzca, manteniendo la altura completa de la página */
 }
 
 /* Estilos generales */
 body, html {
     margin: 0;
     padding: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
     font-family: Arial, sans-serif;
+    height: 100%; /* Asegura que el body y html abarquen toda la altura de la página */
 }
 
-/* Header */
-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+/* Navbar */
+header ul {
+    background-color: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-    header ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
+    header ul li {
+        margin: 0 15px;
     }
 
-        header ul li {
-            margin: 0 15px;
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: block;
+            border-radius: 5px;
         }
 
-            header ul li a {
-                text-decoration: none;
-                color: #333;
-                font-weight: bold;
+            header ul li a:hover {
+                background-color: #ddd;
+                color: black;
             }
 
-                header ul li a:hover {
-                    color: #007bff;
-                }
+            header ul li a[href="../index.html"] {
+                background-color: #f45a27; /* Color para "Inicio" */
+            }
 
-/* Main content */
-main {
-    flex: 1; /* Permite que el main tome el espacio disponible */
-    padding: 20px;
-}
+            header ul li a[href="servicio.html"] {
+                background-color: #4caf50; /* Color para "Servicio" */
+            }
 
+            header ul li a[href="acercade.html"] {
+                background-color: #ffeb3b; /* Color para "Acerca de" */
+                color: black;
+            }
+
+            header ul li a[href="contacto.html"] {
+                background-color: #f44336; /* Color para "Contacto" */
+            }
+
+/* Servicios */
 .services {
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: #0056a4; /* Color azul similar al de "Inicio" */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-    .services h1 {
-        font-size: 28px;
-        color: #333;
-        margin-bottom: 20px;
+    .services h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
     }
 
-.service {
-    margin-bottom: 30px;
+.service-item {
+    background-color: #ffffff;
+    color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-    .service h2 {
-        font-size: 22px;
-        color: #333;
-        margin-bottom: 10px;
+    .service-item h3 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
     }
 
-    .service p {
-        font-size: 16px;
-        color: #555;
+    .service-item p {
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin-bottom: 15px;
     }
 
-    .service img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        border-radius: 8px;
-        margin-top: 10px;
+    .service-item img {
+        max-width: 100%;
+        border-radius: 5px;
     }
 
 /* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: relative; /* Cambiado a relative */
-    bottom: 0;
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Para asegurar que el body ocupe al menos la altura completa de la ventana */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Estilos para el header */
-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-}
-
-    header ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-        header ul li {
-            margin: 0 15px;
-        }
-
-            header ul li a {
-                text-decoration: none;
-                color: #333;
-                font-weight: bold;
-            }
-
-                header ul li a:hover {
-                    color: #007bff;
-                }
-
-/* Estilos para el main */
-main {
-    flex: 1; /* Esto permite que el main ocupe el espacio restante */
-    padding: 20px;
-}
-
-.about, .contact {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-    .about h1, .contact h1 {
-        font-size: 28px;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    .about p, .contact p {
-        font-size: 16px;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-
-    .about img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        border-radius: 8px;
-        margin-top: 20px;
-    }
-
-.contact-info {
-    margin-bottom: 30px;
-}
-
-    .contact-info h2 {
-        font-size: 22px;
-        color: #333;
-        margin-bottom: 15px;
-    }
-
-    .contact-info p {
-        font-size: 16px;
-        color: #555;
-        margin: 5px 0;
-    }
-
-.contact-form {
-    margin-top: 20px;
-}
-
-    .contact-form h2 {
-        font-size: 22px;
-        color: #333;
-        margin-bottom: 15px;
-    }
-
-    .contact-form label {
-        display: block;
-        font-size: 16px;
-        color: #333;
-        margin: 10px 0 5px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-        max-width: 600px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        margin-bottom: 10px;
-    }
-
-    .contact-form button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-
-/* Estilos para el footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
-
 .footer-container {
-    background-color: #F45A27; /* Matching the orange background */
+    background-color: #f45a27;
     color: white;
-    padding: 5px 10px; /* Reduced padding to decrease height */
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Aligns items vertically to center */
-    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    position: relative;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 150px; /* Adjusted minimum width */
-    margin: 0; /* Removed margin to decrease height */
-    text-align: center; /* Center align the text and content */
+    text-align: center;
 }
 
     .footer-section p {
+        margin-bottom: 10px;
         font-weight: bold;
-        margin: 0; /* Removed margin to save space */
     }
 
 .footer-menu {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
     .footer-menu li {
-        margin-bottom: 4px; /* Slight reduction in spacing between list items */
+        margin: 5px 0;
     }
 
-    .footer-menu a {
-        color: white;
-        text-decoration: none;
-    }
-
-        .footer-menu a:hover {
-            text-decoration: underline;
+        .footer-menu li a {
+            color: white;
+            text-decoration: none;
         }
 
-.social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons horizontally */
-    gap: 10px; /* Adjust the spacing between icons */
-    margin-top: 10px; /* Add a margin on top to create space between the text and icons */
-    align-items: center; /* Align icons vertically to center */
+            .footer-menu li a:hover {
+                text-decoration: underline;
+            }
+
+.social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
 }
 
-    .social-icons a img {
-        width: 24px; /* Keep social media icons at default size */
-        height: 24px;
+.footer-container {
+    flex-shrink: 0; /* Asegura que el footer no se reduzca, manteniendo la altura completa de la página */
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Navbar */
+header ul {
+    background-color: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+    header ul li {
+        margin: 0 15px;
     }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: block;
+            border-radius: 5px;
+        }
+
+            header ul li a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            header ul li a[href="../index.html"] {
+                background-color: #f45a27; /* Color para "Inicio" */
+            }
+
+            header ul li a[href="servicio.html"] {
+                background-color: #4caf50; /* Color para "Servicio" */
+            }
+
+            header ul li a[href="acercade.html"] {
+                background-color: #ffeb3b; /* Color para "Acerca de" */
+                color: black;
+            }
+
+            header ul li a[href="contacto.html"] {
+                background-color: #f44336; /* Color para "Contacto" */
+            }
+
+/* Sección de Acerca de */
+.about {
+    background-color: #0056a4; /* Fondo azul similar al de la página de Inicio */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .about h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
     }
 
-    .footer-section {
-        text-align: center;
-        margin-bottom: 10px; /* Adds a bit of spacing on small screens */
+    .about p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 20px;
     }
+
+    .about img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+/* Footer */
+.footer-container {
+    background-color: #f45a27;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+    .footer-section p {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .footer-menu li {
+        margin: 5px 0;
+    }
+
+        .footer-menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+            .footer-menu li a:hover {
+                text-decoration: underline;
+            }
+
+.social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.footer-container {
+    flex-shrink: 0;
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Navbar */
+header ul {
+    background-color: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+    header ul li {
+        margin: 0 15px;
+    }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: block;
+            border-radius: 5px;
+        }
+
+            header ul li a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            header ul li a[href="../index.html"] {
+                background-color: #f45a27; /* Color para "Inicio" */
+            }
+
+            header ul li a[href="servicio.html"] {
+                background-color: #4caf50; /* Color para "Servicio" */
+            }
+
+            header ul li a[href="acercade.html"] {
+                background-color: #ffeb3b; /* Color para "Acerca de" */
+                color: black;
+            }
+
+            header ul li a[href="contacto.html"] {
+                background-color: #f44336; /* Color para "Contacto" */
+            }
+
+/* Sección de Contacto */
+.contact {
+    background-color: #0056a4; /* Fondo azul similar al de la página de Inicio */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .contact h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+.contact-info, .contact-form {
+    background-color: #0078d7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .contact-info p, .contact-form label {
+        font-size: 1em;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        background-color: #f45a27;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+        .contact-form button:hover {
+            background-color: #e03e1c;
+        }
+
+/* Footer */
+.footer-container {
+    background-color: #f45a27;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+    .footer-section p {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .footer-menu li {
+        margin: 5px 0;
+    }
+
+        .footer-menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+            .footer-menu li a:hover {
+                text-decoration: underline;
+            }
+
+.social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.footer-container {
+    flex-shrink: 0;
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Navbar */
+header ul {
+    background-color: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+    header ul li {
+        margin: 0 15px;
+    }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: block;
+            border-radius: 5px;
+        }
+
+            header ul li a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            header ul li a[href="../index.html"] {
+                background-color: #f45a27; /* Color para "Inicio" */
+            }
+
+            header ul li a[href="servicio.html"] {
+                background-color: #4caf50; /* Color para "Servicio" */
+            }
+
+            header ul li a[href="acercade.html"] {
+                background-color: #ffeb3b; /* Color para "Acerca de" */
+                color: black;
+            }
+
+            header ul li a[href="contacto.html"] {
+                background-color: #f44336; /* Color para "Contacto" */
+            }
+
+/* Sección de productos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px;
+}
+
+.product-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn {
+    background-color: #f45a27;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .add-to-cart-btn:hover {
+        background-color: #333;
+    }
+
+/* Animación de los productos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección de Video */
+.video-container {
+    text-align: center;
+    margin: 30px;
+}
+
+    .video-container video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Sección de Contacto */
+.contact {
+    background-color: #0056a4;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .contact h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+.contact-info, .contact-form {
+    background-color: #0078d7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .contact-info p, .contact-form label {
+        font-size: 1em;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        background-color: #f45a27;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+        .contact-form button:hover {
+            background-color: #e03e1c;
+        }
+
+/* Footer */
+.footer-container {
+    background-color: #f45a27;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+    .footer-section p {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .footer-menu li {
+        margin: 5px 0;
+    }
+
+        .footer-menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+            .footer-menu li a:hover {
+                text-decoration: underline;
+            }
+
+.social-icons img {
+    width: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.footer-container {
+    flex-shrink: 0;
 }
