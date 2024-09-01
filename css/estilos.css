@@ -233,6 +233,16 @@ header ul {
         border-radius: 5px;
     }
 
+    /* Estilos del mapa */
+    .service-item iframe {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 400px; /* Altura del mapa */
+        margin-bottom: 15px;
+    }
+
 /* Footer */
 .footer-container {
     background-color: #f45a27;
@@ -279,6 +289,7 @@ header ul {
 .footer-container {
     flex-shrink: 0; /* Asegura que el footer no se reduzca, manteniendo la altura completa de la página */
 }
+
 
 /* Estilos generales */
 body, html {
@@ -479,43 +490,58 @@ header ul {
     border-radius: 10px;
     margin: 20px auto;
     max-width: 600px;
-    text-align: left;
+}
+
+/* Centrando la información de contacto */
+.contact-info {
+    text-align: center; /* Centra el texto dentro del contenedor */
 }
 
     .contact-info h2, .contact-form h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
         color: white;
+        text-align: center; /* Centra el título */
     }
 
-    .contact-info p, .contact-form label {
+    .contact-info p {
         font-size: 1em;
         margin-bottom: 10px;
         color: white;
+        text-align: center; /* Centra el texto de los párrafos */
     }
 
-    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 1em;
-    }
+.contact-form label {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: white;
+}
 
-    .contact-form button {
-        background-color: #f45a27;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        cursor: pointer;
-    }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
 
-        .contact-form button:hover {
-            background-color: #e03e1c;
-        }
+/* Botón de enviar centrado */
+.contact-form button {
+    background-color: #f45a27;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block; /* Asegura que el botón se comporte como un bloque */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+}
+
+    .contact-form button:hover {
+        background-color: #e03e1c;
+    }
 
 /* Footer */
 .footer-container {
