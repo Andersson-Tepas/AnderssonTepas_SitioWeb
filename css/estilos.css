@@ -672,19 +672,19 @@ header ul {
         transform: translateY(0);
     }
 }
-
 /* Sección de Video */
 .video-container {
     text-align: center;
-    margin: 30px;
+    margin: 20px; /* Margen intermedio */
 }
 
     .video-container video {
-        max-width: 100%;
+        max-width: 35%;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
 
 /* Sección de Contacto */
 .contact {
